@@ -155,7 +155,7 @@
             <input class="formcontrol" name="user_email" type="text" placeholder="邮箱：" required="required"/>
         </div>
         <div class="formgroup">
-            <span style="margin-left: -30px;font-size: 16px;">性 别：</span>  <input id="man" name="user_sex" type="radio" value="man"/>男<input id="woman" name="user_sex" type="radio"   value="woman"/>女
+            <input class="formcontrol" name="user_sex" type="text" placeholder="性别：男/女" required="required"/>
         </div>
         <div class="formgroup">
             <input class="formcontrol" name="user_birth" type="date" placeholder="出生日期:" required="required"/>
@@ -163,10 +163,9 @@
         <div class="formgroup">
             <input class="formcontrol" name="user_phone" type="text" placeholder="电话：" required="required"/>
         </div>
-        <button id="zhuc" type="submit">注册</button>
+        <button id="zhuce" type="submit">注册</button>
     </form>
 </div>
-
 <div id="login">
     <div class="back">
         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -181,25 +180,29 @@
         </div>
         <button id="denglu" type="submit">登录</button>
     </form>
-    <!-- <a href="password.html" class="writePass">忘记密码？/修改密码</a> -->
+     <a href="/password" class="writePass">忘记密码？</a>
 </div>
 
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script>
     $(()=>{
+        $("input").val("");
         $("#btn2").click(()=>{
+            $("input").val("");
         $("#welcome").hide();
     $("#register").slideDown();
     $("#login").hide();
 
     });
     $("#btn1").click(()=>{
+        $("input").val("");
         $("#welcome").hide();
     $("#login").slideDown();
     $("#register").hide();
 
     });
     $(".back").click(()=>{
+        $("input").val("");
         $("#welcome").slideDown();
     $("#login").hide();
     $("#register").hide();

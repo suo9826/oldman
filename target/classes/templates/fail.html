@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .prompt{
+            position: fixed;
+            width:450px;
+            height: 300px;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            border-radius: 5px;
+            text-align: center;
+
+        }
+        i{
+            font-size: 30px;
+            color: red;
+        }
+        #button{
+            width:50px;
+            height:25px;
+        }
+    </style>
+</head>
+<body>
+<div class="prompt">
+    <i class="glyphicon glyphicon-remove-sign"><br>
+        注册失败</i>  <br><br>
+    <form action="login.html">
+        <input id="button" type="submit" value="确认">
+    </form>
+
+
+</div>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js" th:inline="javascript"></script>
+<script>
+    // $("button").click(()=>{
+    //     $.ajax({
+    //     url: basePath + '/index/ajaxtest',
+    // });
+    //
+    // });
+
+
+
+</script>
+</body>
+</html>

@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 @Mapper
 public interface OldpeopleMapper {
-    @Update("update oldpeople set old_name=#{old_name},old_age=#{old_age},old_sex=#{old_sex},old_birthday=#{old_birthday} where id=#{id}")
-    public void update(Oldpeople oldpeople);
+   @Update("update oldpeople set old_name=#{old_name},old_age=#{old_age},old_sex=#{old_sex},old_birthday=#{old_birthday},old_son=#{old_son},old_sonphone=#{old_sonphone},old_homeport=#{old_homeport},old_joindate=#{old_joindate},old_nurseid=#{old_nurseid},old_homeaddress=#{old_homeaddress} where id=#{id}")
+   public void update(Oldpeople oldpeople);
    // 标记自增主键为什么，增加数据后会自动返回主键的值
     @Options(useGeneratedKeys = true,keyProperty = "id")
     @Insert("insert into oldpeople(old_name,old_age,old_sex,old_birthday,old_homeaddress,old_son,old_sonphone,old_homeport,old_nurseid,old_joindate) values(#{old_name},#{old_age},#{old_sex},#{old_birthday},#{old_homeaddress},#{old_son},#{old_sonphone},#{old_homeport},#{old_nurseid},#{old_joindate});")

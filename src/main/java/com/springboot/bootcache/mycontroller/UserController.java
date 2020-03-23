@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 
 @Controller
 public class UserController {
@@ -37,8 +38,29 @@ public class UserController {
     @GetMapping("/updateUser")
     public String updateUser(User user)
     {
+
         userService.uodate(user);
         return "1";
+    }
+    //更新密码的
+    @ResponseBody
+    @GetMapping("/updatePassword")
+    public String updatePassword(User user) {
+        ArrayList<User> users = userService.selectAll();
+        for (User u : users) {
+            if (u.getUser_name().equals(user.getUser_name())) {
+                if (u.getUser_email().equals(user.getUser_email())) {
+                    userService.updatePassword(user);
+                    System.out.println(0);
+                    return "0";
+                }
+                System.out.println(2);
+                return "2";
+            }
+            System.out.println(1);
+            return "1";
+        }
+        return "login";
     }
 
 }

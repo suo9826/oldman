@@ -36,4 +36,16 @@ public class UserService {
     {
         userMapper.update(user);
     }
+    //查询
+    public User selectByuser(User user)
+    {
+        User user1 = userMapper.selectByuser(user);
+        // System.out.println("select"+user.toString());
+        return user1;
+    }
+    //更新密码
+    public void updatePassword(User user)
+    {
+        userMapper.updatePassword(user);
+    }
 }

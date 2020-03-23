@@ -13,5 +13,10 @@ public class RequestController {
        // model.addAttribute("user",new User());
         return "login";
     }
+    @RequestMapping("/password")
+    public String password()
+    {
+        return "password";
+    }
 
 }

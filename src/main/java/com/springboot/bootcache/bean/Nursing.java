@@ -1,5 +1,7 @@
 package com.springboot.bootcache.bean;
-
+/*
+hujuku
+ */
 import java.sql.Date;
 
 public class Nursing {
@@ -9,7 +11,7 @@ public class Nursing {
     private Date    nurse_birthday;
     private String  nurse_politic;
     private Date    nurse_joindate;
-    private String  nurse_working;
+    private Integer  nurse_working;
     private Integer nurse_grada;
     private Integer nurse_age;
     private String  nurse_phone;
@@ -78,11 +80,11 @@ public class Nursing {
         this.nurse_joindate = nurse_joindate;
     }
 
-    public String getNurse_working() {
+    public Integer getNurse_working() {
         return nurse_working;
     }
 
-    public void setNurse_working(String nurse_working) {
+    public void setNurse_working(Integer nurse_working) {
         this.nurse_working = nurse_working;
     }
 
